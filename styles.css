@@ -1,0 +1,147 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  background: #0f0f1a;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at 20% 20%, #2b2b3c, #0f0f1a);
+  perspective: 1000px;
+}
+
+/* Parallax illusion */
+.parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 300%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  opacity: 0.06;
+  animation: parallaxMove 30s infinite linear alternate;
+  z-index: 1;
+}
+
+@keyframes parallaxMove {
+  0% {
+    transform: translate(-10%, -10%) scale(1.1);
+  }
+  100% {
+    transform: translate(10%, 10%) scale(1.1);
+  }
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Headline Animation */
+.headline {
+  font-size: 4rem;
+  background: linear-gradient(90deg, #7f5af0, #00ffe7, #7f5af0);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: wave 6s infinite linear;
+}
+
+@keyframes wave {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #ccc;
+  letter-spacing: 1px;
+}
+
+/* CTA Button */
+.cta {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border: 2px solid #7f5af0;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.cta:hover {
+  background-color: #7f5af0;
+  box-shadow: 0 0 15px #7f5af0;
+}
+
+/* Floating Glowing Cube */
+.floating-cube {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  perspective: 800px;
+  z-index: 2;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.cube {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(127, 90, 240, 0.1);
+  border: 2px solid #7f5af0;
+  box-shadow: 0 0 20px #7f5af0aa;
+}
+
+/* Position each face */
+.front  { transform: rotateY(  0deg) translateZ(50px); }
+.back   { transform: rotateY(180deg) translateZ(50px); }
+.right  { transform: rotateY( 90deg) translateZ(50px); }
+.left   { transform: rotateY(-90deg) translateZ(50px); }
+.top    { transform: rotateX( 90deg) translateZ(50px); }
+.bottom { transform: rotateX(-90deg) translateZ(50px); }
