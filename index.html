@@ -2,11 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DRAFT | Drift into Draft</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
+  <header class="navbar">
+    <h2>DRAFT</h2>
+  </header>
+
   <section class="hero">
     <div class="overlay parallax"></div>
     <div class="content">
@@ -25,5 +31,23 @@
       </div>
     </div>
   </section>
+
+  <!-- Scroll-triggered sections -->
+  <section class="info fade-section">
+    <h2>Smart Print Engine</h2>
+    <p>AI-powered models optimize your file before printing starts.</p>
+  </section>
+
+  <section class="info fade-section">
+    <h2>Real-time ETA</h2>
+    <p>Track your order's journey from lab to doorstep with precision.</p>
+  </section>
+
+  <section class="info fade-section">
+    <h2>Design Anything</h2>
+    <p>From mechanical parts to art pieces – unleash your imagination.</p>
+  </section>
+
+  <script src="scripts.js"></script>
 </body>
 </html>

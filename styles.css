@@ -145,3 +145,39 @@ body, html {
 .left   { transform: rotateY(-90deg) translateZ(50px); }
 .top    { transform: rotateX( 90deg) translateZ(50px); }
 .bottom { transform: rotateX(-90deg) translateZ(50px); }
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: -100px;
+  left: 0;
+  background: #1c1c2c;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Scroll Sections */
+.info {
+  padding: 80px 20px;
+  background-color: #14141f;
+  color: #fff;
+  text-align: center;
+  margin-top: 60px;
+  opacity: 0; /* Hidden until fade-in */
+}
+
+.info h2 {
+  font-size: 2rem;
+  color: #7f5af0;
+}
+
+.info p {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto;
+}
