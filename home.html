@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DASHBOARD | DRAFT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="icon" href="/favicon.ico" />
+</head>
+<body class="flex bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+
+  <!-- Sidebar -->
+  <aside class="w-64 min-h-screen bg-white dark:bg-gray-800 shadow-lg">
+    <div class="p-6 text-2xl font-bold tracking-tight text-center border-b border-gray-200 dark:border-gray-700">
+      DRAFT
+    </div>
+    <nav class="p-4 space-y-4">
+      <a href="home.html" class="block hover:bg-gray-200 dark:hover:bg-gray-700 p-2 rounded">🏠 Home</a>
+      <a href="place-order.html" class="block hover:bg-gray-200 dark:hover:bg-gray-700 p-2 rounded">📝 Place Order</a>
+      <a href="orders.html" class="block hover:bg-gray-200 dark:hover:bg-gray-700 p-2 rounded">📦 Orders</a>
+      <a href="uploads.html" class="block hover:bg-gray-200 dark:hover:bg-gray-700 p-2 rounded">📁 Uploads</a>
+      <a href="settings.html" class="block hover:bg-gray-200 dark:hover:bg-gray-700 p-2 rounded">⚙️ Settings</a>
+      <a href="login.html" class="block text-red-600 hover:bg-red-100 dark:hover:bg-red-700 p-2 rounded">🚪 Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-6">
+    <header class="flex justify-between items-center mb-6">
+      <h1 class="text-2xl font-semibold">Welcome, Nova 👋</h1>
+      <div class="flex items-center gap-4">
+        <!-- Dark Mode Toggle -->
+        <button id="darkModeToggle" class="bg-gray-200 dark:bg-gray-700 p-2 rounded-full">
+          🌙
+        </button>
+        <!-- Notifications -->
+        <button class="relative">
+          🔔
+          <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full animate-ping"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Dashboard Widgets -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-4 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+        <h2 class="text-lg font-bold mb-2">Orders</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-300">No recent orders yet.</p>
+      </div>
+      <div class="p-4 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+        <h2 class="text-lg font-bold mb-2">Uploads</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-300">You haven’t uploaded any files yet.</p>
+      </div>
+      <div class="p-4 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+        <h2 class="text-lg font-bold mb-2">Account</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-300">Plan: Free Tier</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Dark mode toggle logic
+    const toggleBtn = document.getElementById("darkModeToggle");
+    toggleBtn.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+    });
+
+    // Optional: Fade-in animation
+    gsap.from("main", { opacity: 0, y: 20, duration: 0.6 });
+  </script>
+
+</body>
+</html>

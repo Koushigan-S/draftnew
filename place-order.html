@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Place Order | DRAFT</title>
+  <link rel="stylesheet" href="place-order.css" />
+</head>
+<body class="glow-background">
+
+  <!-- Back Button -->
+  <button class="back-button" onclick="goBack()">← Back</button>
+
+  <div class="place-order-container" id="formContainer">
+    <h2>Place Your Order</h2>
+    <form id="placeOrderForm">
+      <label for="productType">Product Type</label>
+      <select id="productType" required>
+        <option value="">-- Select --</option>
+        <option value="Black & White">Black & White Printout</option>
+        <option value="Color">Color Printout</option>
+      </select>
+
+      <label for="uploadFile">Upload File</label>
+      <input type="file" id="uploadFile" accept=".pdf,.doc,.jpg,.png" required />
+
+      <label for="specifications">Specifications (Optional)</label>
+      <textarea id="specifications" rows="4" placeholder="e.g., Double-sided, staple it, etc."></textarea>
+
+      <label for="deliveryAddress">Delivery Address</label>
+      <textarea id="deliveryAddress" rows="3" required placeholder="Your full address..."></textarea>
+
+      <label for="paymentMethod">Payment Method</label>
+      <select id="paymentMethod" required>
+        <option value="">-- Select --</option>
+        <option value="Paytm UPI">Paytm UPI</option>
+        <option value="Cash on Delivery">Cash on Delivery</option>
+      </select>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+
+  <!-- Confirmation Section -->
+  <div id="confirmationPage" class="confirmation-page">
+    <div class="tick">&#10004;</div>
+    <h2>Order Placed Successfully!</h2>
+    <p>Thank you for your order. You will receive a confirmation shortly.</p>
+  </div>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="place-order.js"></script>
+</body>
+</html>

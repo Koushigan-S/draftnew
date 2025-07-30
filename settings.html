@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="settings-container">
+    <h2>⚙️ Settings</h2>
+
+     <!-- Account Section -->
+    <div class="setting-card">
+      <h2>👤 Account Info</h2>
+      <p><strong>Name:</strong> Nova</p>
+      <p><strong>Email:</strong> nova@example.com</p>
+      <button onclick="editAccount()">Edit</button>
+    </div>
+
+    <!-- Address Book -->
+    <div class="setting-card">
+      <h2>🏠 Address Book</h2>
+      <p>Home: Tirupur, TN</p>
+      <button onclick="manageAddress()">Manage</button>
+    </div>
+
+    <div class="setting-box">
+      <label class="switch-label">
+        🌙 Dark Mode
+        <label class="switch">
+          <input type="checkbox" id="darkToggle">
+          <span class="slider"></span>
+        </label>
+      </label>
+    </div>
+
+    <div class="setting-box">
+      <h3>📬 Notifications</h3>
+      <label><input type="checkbox" checked> Order Updates</label><br>
+      <label><input type="checkbox"> Promo Emails</label><br>
+      <label><input type="checkbox"> SMS Alerts</label>
+    </div>
+
+    <div class="setting-box">
+      <h3>🔐 Change Password</h3>
+      <input type="password" placeholder="Current Password"><br>
+      <input type="password" placeholder="New Password"><br>
+      <input type="password" placeholder="Confirm New Password">
+    </div>
+
+    <div class="setting-box danger-zone">
+      <button class="delete-btn">❌ Delete Account</button>
+    </div>
+
+    <div class="setting-box">
+      <button class="save-btn">✅ Save Changes</button>
+    </div>
+  </div>
+
+  <script src="settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Uploads</title>
+  <link rel="stylesheet" href="uploads.css">
+</head>
+<body>
+  <div class="uploads-container">
+    <button class="back-btn" onclick="goBack()">🔙 Back</button>
+    <h2>📤 Your Uploads</h2>
+
+    <div class="upload-section">
+      <h3>Upload New File</h3>
+      <input type="file" id="fileInput">
+      <button onclick="uploadFile()">Upload</button>
+    </div>
+
+    <div class="uploaded-files">
+      <h3>Uploaded Files</h3>
+      <ul id="fileList">
+        <!-- Uploaded file items will go here -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="uploads.js"></script>
+</body>
+</html>

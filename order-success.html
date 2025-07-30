@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Confirmed</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body class="success-body">
+  <div class="success-container">
+    <div class="tick-animation">✅</div>
+    <h1 class="success-message">Your order has been placed!</h1>
+  </div>
+
+  <script>
+    // Trigger confetti
+    confetti({
+      particleCount: 200,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+
+    // Optional: Repeat confetti briefly
+    setTimeout(() => {
+      confetti({
+        particleCount: 100,
+        spread: 60,
+        origin: { y: 0.6 }
+      });
+    }, 500);
+  </script>
+</body>
+</html>

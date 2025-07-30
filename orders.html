@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Orders</title>
+  <link rel="stylesheet" href="orders.css">
+</head>
+<body>
+  <div class="orders-container">
+    <h1>🛒 Your Orders</h1>
+
+    <div class="order-card">
+      <h2>📦 Order #DRAFT12345</h2>
+      <p><strong>Status:</strong> Delivered</p>
+      <p><strong>Date:</strong> 25 July 2025</p>
+      <p><strong>Items:</strong> 2x Custom Mugs, 1x T-Shirt</p>
+      <button onclick="viewDetails('DRAFT12345')">View Details</button>
+    </div>
+
+    <div class="order-card">
+      <h2>📦 Order #DRAFT12312</h2>
+      <p><strong>Status:</strong> In Transit</p>
+      <p><strong>Date:</strong> 22 July 2025</p>
+      <p><strong>Items:</strong> 1x Hoodie, 1x Keychain</p>
+      <button onclick="viewDetails('DRAFT12312')">View Details</button>
+    </div>
+
+    <div class="order-card">
+      <h2>📦 Order #DRAFT12289</h2>
+      <p><strong>Status:</strong> Processing</p>
+      <p><strong>Date:</strong> 20 July 2025</p>
+      <p><strong>Items:</strong> 1x Canvas Poster</p>
+      <button onclick="viewDetails('DRAFT12289')">View Details</button>
+    </div>
+
+    <div class="back-btn-wrapper">
+      <button onclick="goBack()">⬅️ Back</button>
+    </div>
+  </div>
+
+  <script src="orders.js"></script>
+</body>
+</html>
